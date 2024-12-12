@@ -15,6 +15,7 @@ const Formulario = (props) => {
   const manejarEnvio = (e) => {
     e.preventDefault();
     let datosAenviar = [nombre, puesto, foto, equipo];
+
     registrarColaborador(datosAenviar);
   };
 
