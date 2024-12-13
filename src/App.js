@@ -124,6 +124,12 @@ function App() {
     actualizarEquipos(equiposActualizados);
   };
 
+  //Crear equipo
+  const crearEquipo = (nuevoEquipo) => {
+    console.log(nuevoEquipo);
+    actualizarEquipos([...equipos, { ...nuevoEquipo, id: uuid() }]);
+  };
+
   return (
     <div>
       <Header />
@@ -131,6 +137,7 @@ function App() {
         <Formulario
           equipos={equipos.map((equipo) => equipo.titulo)}
           registrarColaborador={registrarColaborador}
+          crearEquipo={crearEquipo}
         />
       )}
 
